@@ -20,4 +20,4 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: List Directory
-      run: ls -lh *
+      run: ls -lh **/*
