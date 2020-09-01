@@ -27,3 +27,13 @@ jobs:
       run: ls -lh tv/build/generated
     - name: List APKs
       run: find . -type f -regex ".*\.apk" -ls
+    - name: Get TV Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: TV Build Artifact
+        path: tv/build/outputs/apk/release/tv-release-unsigned.apk
+    - name: Get Mobile Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Mobile Build Artifact
+        path: mobile/build/outputs/apk/release/mobile-release-unsigned.apk
