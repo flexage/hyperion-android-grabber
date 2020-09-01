@@ -22,8 +22,8 @@ jobs:
     - name: List Directory
       run: ls -lh **/*
     - name: List Directory
-      run: ls -lh tv/builds/outputs
+      run: ls -lh tv/build/outputs
     - name: List Directory
-      run: ls -lh tv/builds/generated
+      run: ls -lh tv/build/generated
     - name: List APKs
       run: find . -type f -regex ".*\.apk" -ls
