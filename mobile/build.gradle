@@ -25,7 +25,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.abrenoch.hyperiongrabber"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1012
         versionName "1.0"
