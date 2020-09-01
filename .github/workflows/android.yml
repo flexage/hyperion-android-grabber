@@ -27,13 +27,21 @@ jobs:
       run: ls -lh tv/build/generated
     - name: List APKs
       run: find . -type f -regex ".*\.apk" -ls
+    - name: Sign Release
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: tv/build/outputs/apk/release
+        signingKeyBase64: aaaaaa
+        alias: aaaaaa
+        keyStorePassword: aaaaaa
+        keyPassword: aaaaaa
     - name: Get TV Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: TV Build Artifact
-        path: tv/build/outputs/apk/release/tv-release-unsigned.apk
+        path: tv/build/outputs/apk/release/*.apk
     - name: Get Mobile Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: Mobile Build Artifact
-        path: mobile/build/outputs/apk/release/mobile-release-unsigned.apk
+        path: mobile/build/outputs/apk/release/*.apk
